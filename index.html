@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Royal Flowers</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar" id="navbar">
+    <a href="#home" class="logo" aria-label="Royal Flowers">
+        <span>ROYAL</span>
+        <small>FLOWERS</small>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#collections" data-en="Collections" data-ar="المجموعات">Collections</a>
+        <a href="#why-us" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+        <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button id="languageBtn" class="language-btn" type="button">AR</button>
+
+        <button class="cart-btn" id="cartBtn" type="button" aria-label="Open cart">
+            <span class="cart-icon">♧</span>
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-glow"></div>
+
+        <div class="hero-content reveal">
+            <p class="eyebrow" data-en="WELCOME TO ROYAL FLOWERS" data-ar="مرحبًا بكم في رويال فلاورز">
+                WELCOME TO ROYAL FLOWERS
+            </p>
+
+            <div class="hero-line"></div>
+
+            <h1>
+                <span data-en="Every Moment" data-ar="كل لحظة">Every Moment</span>
+                <em data-en="Deserves Flowers" data-ar="تستحق الورد">Deserves Flowers</em>
+            </h1>
+
+            <p class="hero-text"
+               data-en="Beautiful flowers, elegant gifts and special details made for unforgettable moments."
+               data-ar="ورود جميلة، هدايا أنيقة وتفاصيل مميزة صُممت لتجعل لحظاتك لا تُنسى.">
+                Beautiful flowers, elegant gifts and special details made for unforgettable moments.
+            </p>
+
+            <a href="#collections" class="main-btn">
+                <span data-en="SHOP NOW" data-ar="تسوق الآن">SHOP NOW</span>
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+
+        <div class="scroll-note">
+            <span></span>
+            <small data-en="SCROLL TO EXPLORE" data-ar="اكتشف المزيد">SCROLL TO EXPLORE</small>
+        </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+    <section class="collections" id="collections">
+
+        <div class="section-heading reveal">
+            <p data-en="CHOOSE YOUR CATEGORY" data-ar="اختر القسم الذي يناسبك">CHOOSE YOUR CATEGORY</p>
+            <div class="heading-line"></div>
+            <h2 data-en="Our Collections" data-ar="مجموعاتنا">Our Collections</h2>
+            <span data-en="Find something beautiful for every occasion."
+                  data-ar="اختار ما يناسب مناسبتك من مجموعاتنا المميزة.">
+                Find something beautiful for every occasion.
+            </span>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="#natural-products" class="category-card reveal" data-category="natural">
+                <div class="category-image" style="background-image:url('images/natural/01.jpeg')"></div>
+                <div class="category-shade"></div>
+                <div class="category-content">
+                    <span class="category-number">01</span>
+                    <h3 data-en="Natural Flowers" data-ar="بوكيهات ورد طبيعي">Natural Flowers</h3>
+                    <p data-en="بوكيهات ورد طبيعي" data-ar="بوكيهات ورد طبيعي">بوكيهات ورد طبيعي</p>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a href="#artificial-products" class="category-card reveal" data-category="artificial">
+                <div class="category-image" style="background-image:url('images/artificial/33.jpeg')"></div>
+                <div class="category-shade"></div>
+                <div class="category-content">
+                    <span class="category-number">02</span>
+                    <h3 data-en="Artificial Flowers" data-ar="بوكيهات ورد صناعي">Artificial Flowers</h3>
+                    <p data-en="بوكيهات ورد صناعي" data-ar="بوكيهات ورد صناعي">بوكيهات ورد صناعي</p>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a href="#chocolate-products" class="category-card reveal" data-category="chocolate">
+                <div class="category-image" style="background-image:url('images/chocolate/66.jpeg')"></div>
+                <div class="category-shade"></div>
+                <div class="category-content">
+                    <span class="category-number">03</span>
+                    <h3 data-en="Flowers & Chocolates" data-ar="بوكيهات ورد وشوكولاتة">Flowers & Chocolates</h3>
+                    <p data-en="بوكيهات ورد وشوكولاتة" data-ar="بوكيهات ورد وشوكولاتة">بوكيهات ورد وشوكولاتة</p>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a href="#cars-products" class="category-card reveal" data-category="cars">
+                <div class="category-image" style="background-image:url('images/cars/01.jpeg')"></div>
+                <div class="category-shade"></div>
+                <div class="category-content">
+                    <span class="category-number">04</span>
+                    <h3 data-en="Car Decorations" data-ar="تزيين سيارات">Car Decorations</h3>
+                    <p data-en="تزيين سيارات" data-ar="تزيين سيارات">زواق سيارات</p>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- NATURAL FLOWERS PRODUCTS -->
+    <section class="products-section" id="natural-products">
+
+        <div class="section-heading reveal">
+            <p data-en="NATURAL FLOWERS" data-ar="بوكيهات ورد طبيعي">NATURAL FLOWERS</p>
+            <div class="heading-line"></div>
+            <h2 data-en="Natural Bouquets" data-ar="بوكيهات ورد طبيعي">Natural Bouquets</h2>
+            <span data-en="Choose your bouquet and add it to your cart."
+                  data-ar="اختار البوكيه المناسب وأضفه إلى سلة المشتريات.">
+                Choose your bouquet and add it to your cart.
+            </span>
+        </div>
+
+        <div class="products-grid" id="naturalProductsGrid"></div>
+    </section>
+
+    <!-- ARTIFICIAL FLOWERS PRODUCTS -->
+    <section class="products-section" id="artificial-products">
+        <div class="section-heading reveal">
+            <p data-en="ARTIFICIAL FLOWERS" data-ar="بوكيهات ورد صناعي">ARTIFICIAL FLOWERS</p>
+            <div class="heading-line"></div>
+            <h2 data-en="Artificial Bouquets" data-ar="بوكيهات ورد صناعي">Artificial Bouquets</h2>
+            <span data-en="Choose your bouquet and add it to your cart." data-ar="اختار البوكيه المناسب وأضفه إلى سلة المشتريات.">Choose your bouquet and add it to your cart.</span>
+        </div>
+        <div class="products-grid" id="artificialProductsGrid"></div>
+    </section>
+
+    <!-- FLOWERS & CHOCOLATES PRODUCTS -->
+    <section class="products-section" id="chocolate-products">
+        <div class="section-heading reveal">
+            <p data-en="FLOWERS & CHOCOLATES" data-ar="بوكيهات ورد وشوكولاتة">FLOWERS & CHOCOLATES</p>
+            <div class="heading-line"></div>
+            <h2 data-en="Flowers & Chocolates" data-ar="بوكيهات ورد وشوكولاتة">Flowers & Chocolates</h2>
+            <span data-en="Choose your bouquet and add it to your cart." data-ar="اختار البوكيه المناسب وأضفه إلى سلة المشتريات.">Choose your bouquet and add it to your cart.</span>
+        </div>
+        <div class="products-grid" id="chocolateProductsGrid"></div>
+    </section>
+
+    <!-- CAR DECORATIONS PRODUCTS -->
+    <section class="products-section" id="cars-products">
+        <div class="section-heading reveal">
+            <p data-en="CAR DECORATIONS" data-ar="زواق سيارات">CAR DECORATIONS</p>
+            <div class="heading-line"></div>
+            <h2 data-en="Car Decorations" data-ar="تزيين سيارات">Car Decorations</h2>
+            <span data-en="Beautiful floral details for special moments." data-ar="تنسيقات ورد مميزة لمناسباتك الخاصة.">Beautiful floral details for special moments.</span>
+        </div>
+        <div class="products-grid" id="carsProductsGrid"></div>
+    </section>
+
+    <!-- BRAND STATEMENT -->
+    <section class="statement reveal">
+        <div class="statement-inner">
+            <p data-en="THE ROYAL TOUCH" data-ar="لمسة رويال">THE ROYAL TOUCH</p>
+            <h2 data-en="More Than Flowers<br><em>It's a Feeling.</em>"
+                data-ar="أكثر من مجرد ورد<br><em>إنه إحساس.</em>">
+                More Than Flowers<br><em>It's a Feeling.</em>
+            </h2>
+            <div class="gold-divider"></div>
+            <span data-en="Every arrangement is created to make your moment feel truly special."
+                  data-ar="كل تنسيق نصممه ليجعل لحظتك مختلفة ومميزة.">
+                Every arrangement is created to make your moment feel truly special.
+            </span>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us" id="why-us">
+
+        <div class="section-heading reveal">
+            <p data-en="WHY ROYAL FLOWERS" data-ar="لماذا رويال فلاورز">WHY ROYAL FLOWERS</p>
+            <div class="heading-line"></div>
+            <h2 data-en="Because Details Matter" data-ar="لأن التفاصيل تصنع الفرق">Because Details Matter</h2>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-item reveal">
+                <span class="feature-icon">✿</span>
+                <h3 data-en="Premium Quality" data-ar="جودة عالية">Premium Quality</h3>
+                <p data-en="Carefully selected flowers and materials."
+                   data-ar="نختار أجمل الورود والخامات بعناية.">
+                    Carefully selected flowers and materials.
+                </p>
+            </div>
+
+            <div class="feature-item reveal">
+                <span class="feature-icon">♡</span>
+                <h3 data-en="Made With Love" data-ar="صُنعت بحب">Made With Love</h3>
+                <p data-en="Every detail is prepared with care and passion."
+                   data-ar="كل تفصيلة يتم إعدادها بعناية وشغف.">
+                    Every detail is prepared with care and passion.
+                </p>
+            </div>
+
+            <div class="feature-item reveal">
+                <span class="feature-icon">✦</span>
+                <h3 data-en="Elegant Packaging" data-ar="تغليف أنيق">Elegant Packaging</h3>
+                <p data-en="A beautiful presentation that completes your gift."
+                   data-ar="تغليف أنيق يكمل جمال هديتك.">
+                    A beautiful presentation that completes your gift.
+                </p>
+            </div>
+
+            <div class="feature-item reveal">
+                <span class="feature-icon">⌁</span>
+                <h3 data-en="Fast Delivery" data-ar="توصيل سريع">Fast Delivery</h3>
+                <p data-en="We make sure your order arrives beautifully."
+                   data-ar="نحرص على وصول طلبك إليك بأجمل صورة.">
+                    We make sure your order arrives beautifully.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="contact" id="contact">
+        <div class="contact-overlay"></div>
+        <div class="contact-content reveal">
+            <p data-en="READY TO MAKE A MOMENT SPECIAL?" data-ar="جاهز تخلي لحظتك مميزة؟">
+                READY TO MAKE A MOMENT SPECIAL?
+            </p>
+            <h2 data-en="Let's Create Something Beautiful."
+                data-ar="خلينا نصنع لحظة جميلة.">
+                Let's Create Something Beautiful.
+            </h2>
+            <a href="https://wa.me/201014111440" target="_blank" class="main-btn">
+                <span data-en="CONTACT US" data-ar="تواصل معنا">CONTACT US</span>
+                <span>→</span>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+
+        <div class="footer-brand">
+            <a href="#home" class="logo footer-logo">
+                <span>ROYAL</span>
+                <small>FLOWERS</small>
+            </a>
+            <p data-en="Flowers • Gifts • Special Moments"
+               data-ar="ورد • هدايا • لحظات مميزة">
+                Flowers • Gifts • Special Moments
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="#collections" data-en="Collections" data-ar="المجموعات">Collections</a>
+            <a href="#why-us" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+            <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <a href="https://wa.me/201014111440" target="_blank">WhatsApp</a>
+            <a href="#" data-en="Instagram" data-ar="إنستجرام">Instagram</a>
+            <a href="tel:+201014111440">+20 101 411 1440</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Royal Flowers. All Rights Reserved.</span>
+        <span>AR <b>|</b> EN</span>
+    </div>
+</footer>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay">
+    <aside class="cart">
+        <button class="close-cart" id="closeCart" type="button">×</button>
+
+        <p class="cart-label">ROYAL FLOWERS</p>
+        <h2 data-en="Your Cart" data-ar="سلة المشتريات">Your Cart</h2>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div class="cart-total">
+            <span data-en="Total" data-ar="الإجمالي">Total</span>
+            <strong id="cartTotal">0 EGP</strong>
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn" type="button"
+                data-en="CHECKOUT" data-ar="إتمام الطلب">
+            CHECKOUT
+        </button>
+    </aside>
+</div>
+
+<!-- CHECKOUT -->
+<div class="checkout-overlay" id="checkoutOverlay">
+    <div class="checkout-box">
+        <button class="close-checkout" id="closeCheckout" type="button">×</button>
+
+        <p class="checkout-label">ROYAL FLOWERS</p>
+        <h2 data-en="Complete Your Order" data-ar="أكمل طلبك">Complete Your Order</h2>
+
+        <form id="checkoutForm">
+            <input type="text" id="customerName"
+                   placeholder="Full Name"
+                   data-placeholder-en="Full Name"
+                   data-placeholder-ar="الاسم بالكامل" required>
+
+            <input type="tel" id="customerPhone"
+                   placeholder="Phone Number"
+                   data-placeholder-en="Phone Number"
+                   data-placeholder-ar="رقم الهاتف" required>
+
+            <textarea id="customerAddress"
+                      placeholder="Delivery Address"
+                      data-placeholder-en="Delivery Address"
+                      data-placeholder-ar="عنوان التوصيل" required></textarea>
+
+            <textarea id="customerNotes"
+                      placeholder="Notes (Optional)"
+                      data-placeholder-en="Notes (Optional)"
+                      data-placeholder-ar="ملاحظات (اختياري)"></textarea>
+
+            <button type="submit" class="confirm-order">
+                <span data-en="CONFIRM ORDER" data-ar="تأكيد الطلب">CONFIRM ORDER</span>
+                <span>→</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- IMAGE LIGHTBOX -->
+<div id="imageLightbox" class="image-lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+    <img id="lightboxImage" src="" alt="Product Preview">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
