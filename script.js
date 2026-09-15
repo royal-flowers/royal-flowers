@@ -213,7 +213,7 @@ const artificialProducts = [
     1500, 1500, 900, 750, 1200, 1500, 1000, 1000, 850, 750,
     850, 1200, 1500, 750, 750, 850, 1200, 2000, 1400, 850,
     1300, 500, 1000, 1100, 1200, 850, 3000, 900, 800, 1200,
-    650, 750, 1500, 180
+    650, 750, 1500, 1800
 ];
 
 const chocolateProducts = [
@@ -224,6 +224,15 @@ const chocolateProducts = [
 const carsProducts = [
     1000, 750, 1200, 850, 1500, 1800, 1600,
     1800, 1000, 1500, 1500, 700, 850
+];
+
+const bridalProducts = [
+    1200, 1300, 750, 1200, 1200, 600, 750, 1000, 750, 950, 1600,
+    650, 1500, 1200, 850, 1100, 850, 850, 900, 1200, 600, 1200
+];
+
+const formNaturalProducts = [
+    1700, 3000, 1500, 2000, 1800, 1800, 1800, 2500, 2500, 2150, 1400
 ];
 
 const naturalData = naturalProducts.map((price, index) => {
@@ -273,6 +282,36 @@ const carsData = carsProducts.map((price, index) => {
         cartNameAr: `تزيين سيارة ${index + 1}`
     };
 });
+
+const bridalData = bridalProducts.map((price, index) => {
+    const number = String(index + 1).padStart(2, "0");
+    return {
+        id: `bridal-${index + 1}`,
+        price,
+        image: `images/bridal/${number}.jpeg`,
+        cartNameEn: `Bridal Bouquet ${number}`,
+        cartNameAr: `بوكيه عرايس ${index + 1}`
+    };
+});
+
+const formNaturalData = formNaturalProducts.map((price, index) => {
+    const number = String(index + 1).padStart(2, "0");
+    return {
+        id: `form-natural-${index + 1}`,
+        price,
+        image: `images/form-natural/${number}.jpeg`,
+        cartNameEn: `Natural Flower Form ${number}`,
+        cartNameAr: `فورم ورد طبيعي ${index + 1}`
+    };
+});
+
+function sortProductsByPrice(data) {
+    return [...data].sort((a, b) => {
+        if (a.price === null) return 1;
+        if (b.price === null) return -1;
+        return Number(a.price) - Number(b.price);
+    });
+}
 
 function renderProducts(data, gridId) {
     const grid = document.getElementById(gridId);
@@ -337,7 +376,9 @@ document.querySelectorAll(".category-card").forEach((card) => {
             natural: "natural-products",
             artificial: "artificial-products",
             chocolate: "chocolate-products",
-            cars: "cars-products"
+            cars: "cars-products",
+            bridal: "bridal-products",
+            formNatural: "form-natural-products"
         };
         if (sections[category]) scrollToSection(sections[category]);
     });
@@ -409,10 +450,12 @@ function escapeHtml(value) {
 
 /* INITIAL */
 updateLanguage();
-renderProducts(naturalData, "naturalProductsGrid");
-renderProducts(artificialData, "artificialProductsGrid");
-renderProducts(chocolateData, "chocolateProductsGrid");
-renderProducts(carsData, "carsProductsGrid");
+renderProducts(sortProductsByPrice(naturalData), "naturalProductsGrid");
+renderProducts(sortProductsByPrice(artificialData), "artificialProductsGrid");
+renderProducts(sortProductsByPrice(chocolateData), "chocolateProductsGrid");
+renderProducts(sortProductsByPrice(carsData), "carsProductsGrid");
+renderProducts(sortProductsByPrice(bridalData), "bridalProductsGrid");
+renderProducts(sortProductsByPrice(formNaturalData), "formNaturalProductsGrid");
 
 /* Expose cart functions for product cards */
 window.addToCart = addToCart;
